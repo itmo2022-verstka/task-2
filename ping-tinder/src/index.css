@@ -58,6 +58,21 @@ img {
   height: 100%;
 }
 
+.description {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+.picture :not(:nth-child(7)) .description {
+  color: white;
+}
+
+.pig7 .description {
+  color: black;
+}
+
 #pig1:checked ~ .picture .pig1,
 #pig2:checked ~ .picture .pig2,
 #pig3:checked ~ .picture .pig3,
