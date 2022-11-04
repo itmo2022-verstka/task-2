@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>01-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <!-- TODO -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>01-about-pigs</title>
+  <link rel="stylesheet" href="./index.css">
+
+  <script>
+    function changeImage() {
+      let active_ind = 0
+      let pigs = document.getElementsByClassName('post')
+      while(pigs[active_ind].style.display === "none") {
+        active_ind = (active_ind + 1) % 8
+      }
+      pigs[active_ind].style.display = "none"
+      pigs[(active_ind + 1) % 8].style.display = "list-item"
+      return false;
+    }
+  </script>
+
+</head>
+<body>
+
+<header>
+  <p>PigTinder</p>
+</header>
+
+
+<div class="main">
+  <ul class="posts">
+    <li class="post">
+      <img src="pig_1.jpg" alt="pig">
+      <p>Людмила, <br> 1 месяц</p>
+    </li>
+    <li class="post">
+      <img src="pig_2.jpg" alt="pig">
+      <p>Зинаида, <br> 2 месяца</p>
+    </li>
+    <li class="post">
+      <img src="pig_3.jpg" alt="pig">
+      <p>Аксинья, <br> 3 месяца</p>
+    </li>
+    <li class="post">
+      <img src="pig_4.jpg" alt="pig">
+      <p>Варвара, <br> 4 месяца</p>
+    </li>
+    <li class="post">
+      <img src="pig_5.jpg" alt="pig">
+      <p>Есения, <br> 5 месяцев</p>
+    </li>
+    <li class="post">
+      <img src="pig_6.jpg" alt="pig">
+      <p>Мирослава, <br> 6 месяцев</p>
+    </li>
+    <li class="post">
+      <img src="pig_7.jpg" alt="pig">
+      <p>Милена, <br> 7 месяцев</p>
+    </li>
+    <li class="post">
+      <img src="pig_8.jpg" alt="pig">
+      <p>Ярослава, <br> 8 месяцев</p>
+    </li>
+  </ul>
+
+  <div class="buttons">
+    <img src="dislike.jpg" onclick="changeImage()" alt="dislike">
+    <img src="superlike.jpg" onclick="changeImage()" alt="superlike">
+    <img src="like.jpg" onclick="changeImage()" alt="like">
+  </div>
+
+</div>
+
+</body>
 </html>
