@@ -40,7 +40,6 @@ function OnTouchEnd() {
   const yDiff = state.endY - state.initialY;
   if (Math.abs(xDiff) >= params.minX) {
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
-      console.log(xDiff);
       if (xDiff > 0) {
         const elements = document.querySelectorAll('.buttons-group');
         Array.from(elements)
