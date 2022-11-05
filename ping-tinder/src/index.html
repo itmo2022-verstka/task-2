@@ -2,10 +2,88 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>01-about-cats</title>
+    <title>pig-tinder</title>
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <!-- TODO -->
+    <header class="header">
+      <div class="title">
+        PigTinder
+      </div>
+    </header>
+
+    <main>
+      <div id="imgContainer" class="img-container">
+        <text id="description" class="description">
+          Иван, 10 месяцев
+        </text>
+      </div>
+      <div class="buttons">
+        <button onclick="next()">
+          <img src="images/close.png" alt="close">
+        </button>
+        <button onclick="next()">
+          <img src="images/star.png" alt="star">
+        </button>
+        <button onclick="next()">
+          <img src="images/heart.png" alt="heart">
+        </button>
+      </div>
+      <script>
+        let index = 0;
+        const imgNames = ['0.jpg', '1.jpg', '2.jpg', '3.jpg', '4.webp', '5.webp', '6.jpg', '7.jpg']
+        const descriptions = ['Иван, 10 месяцев', 'Антон, 9 месяцев', 'Афанасий, 8 месяцев',
+          'Роман, 7 месяцев', 'Кузьма, 6 месяцев', 'Арсений, 11 месяцев', 'Адольф, 12 месяцев',
+          'Ануфрий, 13 месяцев'];
+        function next() {
+          index = (index + 1) % imgNames.length;
+          const newUrl = `url('./images/pigs/${imgNames[index]}')`;
+          document.getElementById('imgContainer').style.backgroundImage = newUrl;
+          document.getElementById('description').textContent = descriptions[index];
+        }
+
+        const container = document.getElementById('imgContainer');
+
+        container.addEventListener("touchstart", startTouch, false);
+        container.addEventListener("touchmove", moveTouch, false);
+
+        let initialX = null;
+        let initialY = null;
+
+        function startTouch(e) {
+          initialX = e.touches[0].clientX;
+          initialY = e.touches[0].clientY;
+        }
+
+        function moveTouch(e) {
+          if (initialX === null) {
+            return;
+          }
+
+          if (initialY === null) {
+            return;
+          }
+
+          const currentX = e.touches[0].clientX;
+          const currentY = e.touches[0].clientY;
+
+          const diffX = initialX - currentX;
+          const diffY = initialY - currentY;
+
+          if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+              next();
+            } else {
+              next();
+            }
+          }
+
+          initialX = null;
+          initialY = null;
+
+          e.preventDefault();
+        }
+      </script>
+    </main>
   </body>
 </html>
