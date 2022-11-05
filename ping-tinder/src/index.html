@@ -1,11 +1,247 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>01-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <!-- TODO -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <title>02-pig-tinder</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<header>
+  <h1 class="header-text">
+    PigTinder
+  </h1>
+</header>
+<input class="ratio-boxes" type="radio" id="ratio1" name="select-pig-group" checked>
+<input class="ratio-boxes" type="radio" id="ratio2" name="select-pig-group">
+<input class="ratio-boxes" type="radio" id="ratio3" name="select-pig-group">
+<input class="ratio-boxes" type="radio" id="ratio4" name="select-pig-group">
+<input class="ratio-boxes" type="radio" id="ratio5" name="select-pig-group">
+<input class="ratio-boxes" type="radio" id="ratio6" name="select-pig-group">
+<input class="ratio-boxes" type="radio" id="ratio7" name="select-pig-group">
+<input class="ratio-boxes" type="radio" id="ratio8" name="select-pig-group">
+<input class="ratio-boxes" type="radio" id="ratio9" name="select-pig-group">
+<input class="ratio-boxes" type="radio" id="ratio10" name="select-pig-group">
+<div class="carousel">
+  <div class="carousel-item hidden">
+    <div class="text">
+      Мерседес<br>
+      2 года
+    </div>
+    <div class="empty-place"></div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/1.jpg" alt="Pig">
+    </div>
+  </div>
+  <div class="carousel-item hidden">
+    <div class="text">
+      Яффи<br>
+      3 года
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/2.jpg" alt="Pig">
+    </div>
+  </div>
+  <div class="carousel-item hidden">
+    <div class="text">
+      Найд<br>
+      1 год
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/3.jpg" alt="Pig">
+    </div>
+  </div>
+  <div class="carousel-item hidden">
+    <div class="text">
+      Быстроножка<br>
+      4 года
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/4.jpg" alt="Pig">
+    </div>
+  </div>
+  <div class="carousel-item hidden">
+    <div class="text">
+      Чилла<br>
+      2 года
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/5.jpg" alt="Pig">
+    </div>
+  </div>
+  <div class="carousel-item hidden">
+    <div class="text">
+      Марьяна<br>
+      3 года
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/6.jpg" alt="Pig">
+    </div>
+  </div>
+  <div class="carousel-item hidden">
+    <div class="text">
+      Теодорикс<br>
+      5 лет
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/7.jpg" alt="Pig">
+    </div>
+  </div>
+  <div class="carousel-item hidden">
+    <div class="text">
+      Спайс<br>
+      1 год
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/8.jpg" alt="Pig">
+    </div>
+  </div>
+  <div class="carousel-item hidden">
+    <div class="text">
+      Бублик<br>
+      3 года
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/9.jpg" alt="Pig">
+    </div>
+  </div>
+
+  <div class="carousel-item hidden">
+    <div class="text">
+      Претенденты<br>
+      закончились<br>
+      <br>
+      Приходите<br>
+      позже<br>
+    </div>
+    <div class="img-wrapper">
+      <img class="pig-images" src="res/img/last.png" alt="Pig">
+    </div>
+  </div>
+  <div class="buttons-carousel">
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio2">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio2">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio2">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio3">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio3">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio3">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio4">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio4">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio4">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio5">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio5">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio5">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio6">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio6">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio6">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio7">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio7">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio7">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio8">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio8">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio8">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio9">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio9">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio9">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+    <div class="buttons-group hidden">
+      <label class="labels" for="ratio10">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio10">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" alt="">
+      </label>
+      <label class="labels" for="ratio10">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons"
+             alt="">
+      </label>
+    </div>
+
+    <div class="buttons-group hidden">
+      <label class="labels">
+        <img src="res/img/icons8-отменить-2-96.png" class="grade-buttons" id="deny-button-3" alt="">
+      </label>
+      <label class="labels">
+        <img src="res/img/icons8-нравится-96.png" class="grade-buttons" id="like-button-3" alt="">
+      </label>
+      <label class="labels">
+        <img src="res/img/icons8-звезда-96.png" class="grade-buttons" id="super-like-button-3"
+             alt="">
+      </label>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
