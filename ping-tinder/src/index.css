@@ -57,12 +57,14 @@ main {
   display: flex;
   justify-content: space-around;
 
-  margin-bottom: 5%;
+  margin: 7% 0;
 }
 
 .buttons button {
   border-width: 0;
   border-radius: 50%;
+
+  width: 20%;
 
   aspect-ratio: 1/1;
   box-shadow: 0 2px 10px 0 #000000;
