@@ -6,6 +6,123 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <!-- TODO -->
+    <header class="tinder-header">
+      PigTinder
+    </header>
+    <main>
+      <section class="image-section" id="image-section">
+        <img class="pig-picture" id="pig-picture" src="../../task-img/pig1.jpg" alt="pig1">
+        <section class="shadow-section">
+          <article class="pig-info">
+            <div class="pig-name" id="pig-name">Боря,</div>
+            <div class="pig-age" id="pig-age">10 месяцев</div>
+          </article>
+        </section>
+        <section class="moving-section" id="moving-section">
+          <img class="pig-picture" id="pig-picture-move" src="../../task-img/pig1.jpg" alt="pig1">
+          <section class="shadow-section">
+            <article class="pig-info">
+              <div class="pig-name" id="pig-name-move">Боря,</div>
+              <div class="pig-age" id="pig-age-move">10 месяцев</div>
+            </article>
+          </section>
+        </section>
+      </section>
+      <nav class="move-buttons">
+        <section class="empty"></section>
+        <button class="dislike move-button" onclick="swipeLeft()">
+          <img class="dislike-image" src="../../task-img/free-icon-error-483328.png" alt="dislike">
+        </button>
+        <button class="super-like move-button" onclick="swipeRight()">
+          <img class="star-image" src="../../task-img/starr.png" alt="super-like">
+        </button>
+        <button class="like move-button" onclick="swipeRight()">
+          <img class="like-image" src="../../task-img/heart.png" alt="like">
+        </button>
+      </nav>
+      <script>
+        let image = document.getElementById('pig-picture');
+        let name = document.getElementById('pig-name');
+        let age = document.getElementById('pig-age');
+        let imageMove = document.getElementById('pig-picture-move');
+        let nameMove = document.getElementById('pig-name-move');
+        let ageMove = document.getElementById('pig-age-move');
+        let counter = 0;
+        let pictures = [
+          {'img' : '../../task-img/pig1.jpg', 'name' : 'Боря,', 'age' : '10 месяцев'},
+          {'img' : '../../task-img/pig2.jpeg', 'name' : 'Тимур,', 'age' : '10 месяцев'},
+          {'img' : '../../task-img/pig3.jpg', 'name' : 'Лаванда,', 'age' : '10 месяцев'},
+          {'img' : '../../task-img/pig4.jpg', 'name' : 'Ванесса,', 'age' : '10 месяцев'},
+          {'img' : '../../task-img/pig5.jpeg', 'name' : 'Сэмюэль,', 'age' : '10 месяцев'},
+          {'img' : '../../task-img/pig6.jpg', 'name' : 'Элис,', 'age' : '10 месяцев'},
+          {'img' : '../../task-img/pig7.jpg', 'name' : 'София,', 'age' : '10 месяцев'},
+          {'img' : '../../task-img/pig8.jpg', 'name' : 'Чинь Ли,', 'age' : '10 месяцев'}
+        ];
+
+        function nextPic(imageIn, nameIn, ageIn, next) {
+          console.log('kek');
+          if (next) {
+            counter++;
+          }
+          if (counter >= pictures.length) {
+            counter = 0
+          }
+          imageIn.src = pictures[counter].img;
+          nameIn.textContent = pictures[counter].name;
+          ageIn.textContent = pictures[counter].age;
+        }
+
+        let animation = document.getElementById('moving-section')
+
+        function swipeLeft() {
+          swipe('animate-left-swipe')
+        }
+
+        function swipeRight() {
+          swipe('animate-right-swipe')
+        }
+
+        function swipe(className) {
+          nextPic(image, name, age, true);
+          setTimeout(() => {
+            animation.classList.add(className)
+            setTimeout(() => {
+                nextPic(imageMove, nameMove, ageMove, false);
+                animation.classList.remove(className)
+              },
+              300
+            )
+          }, 100);
+        }
+
+        let xZero = null;
+        let yZero = null;
+
+        document.addEventListener('touchstart', handleTouchStart, false);
+        document.addEventListener('touchmove', handleTouchMove, false);
+
+        function handleTouchStart(event) {
+          xZero = event.touches[0].clientX;
+          yZero = event.touches[0].clientY;
+        }
+
+        function handleTouchMove(event) {
+          if (!xZero || !yZero) {
+            return;
+          }
+          let xDiff = xZero - event.touches[0].clientX;
+          let yDiff = yZero - event.touches[0].clientY;
+          if (Math.abs(yDiff) < Math.abs(xDiff)) {
+            if (xDiff > 0) {
+              swipeLeft();
+            } else {
+              swipeRight();
+            }
+          }
+          xZero = null;
+          yZero = null;
+        }
+      </script>
+    </main>
   </body>
 </html>
