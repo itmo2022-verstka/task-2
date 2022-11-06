@@ -1,1 +1,177 @@
-/* TODO */
+html{
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition-duration: 0.25s;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  background-color: aliceblue;
+}
+
+.tinder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px 0 10px;
+  transition-duration: 0.25s;
+  text-align: left;
+  z-index: 1;
+}
+
+.like .fa-heart {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.nope .fa-remove {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.cards {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.card {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  cursor: pointer;
+  touch-action: none;
+  will-change: transform, opacity;
+}
+
+.card1 {
+  background: url("img/rafael.jpg") no-repeat center/cover;
+}
+
+.card2 {
+  background: url("img/robert.jpg") no-repeat center/cover;
+}
+
+.card3 {
+  background: url("img/peter.jpg") no-repeat center/cover;
+}
+
+.card4 {
+  background: url("img/alejandro.jpg") no-repeat center/cover;
+}
+
+.card5 {
+  background: url("img/eugene.jpg") no-repeat center/cover;
+}
+
+.card6 {
+  background: url("img/lucifer.jpg") no-repeat center/cover;
+}
+
+.card7 {
+  background: url("img/jackson.jpg") no-repeat center/cover;
+}
+
+.card8 {
+  background: linear-gradient(grey, black);
+}
+
+.card2,.card3,.card4,.card5,.card6,.card7,.card8 {
+  display: none;
+}
+
+.moving.card {
+  transition: none;
+}
+
+.card img {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.card h3 {
+  padding-left: 5px;
+  color: white;
+  font-size: 2.6rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+  padding-left: 5px;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 16px 6px 16px 6px;
+}
+
+.buttons button {
+  z-index: 0;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border-style: none;
+  border-radius: 50%;
+  transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
+  -webkit-appearance: button;
+  background: white;
+  box-shadow: 0 4px 9px 0 rgba(213, 218, 224, 0.3);
+  cursor: pointer;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.buttons button:focus {
+  outline: none;
+}
+
+.buttons button:hover {
+  transform: scale(1.1) ;
+}
+
+.buttons i {
+  font-size: 32px;
+  vertical-align: middle;
+}
+
+.fa-heart {
+  color: #FFACE4;
+}
+
+.fa-remove {
+  color: #CDD6DD;
+}
+
+.fa-star {
+  color: #FFD91C;
+}
+
+@media screen and (max-width: 768px){
+  .cards {
+    width: 90%;
+  }
+}
