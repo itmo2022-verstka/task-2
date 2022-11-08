@@ -4,8 +4,30 @@
     <meta charset="utf-8">
     <title>01-about-cats</title>
     <link rel="stylesheet" href="./index.css">
+    <script src="js/swipe.js"></script>
   </head>
   <body>
-    <!-- TODO -->
+
+    <header class="header">
+      PigTinder
+    </header>
+
+    <div class="cards">
+      <div class="card">
+        <img id="image" src="img/1.jpg" alt="swin">
+        <div class="textblock">
+          <p id="name">Евдокия</p>
+          <p id="description">Безработная, 1 месяц</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons__wrapper">
+      <div class="buttons">
+        <button class="dislike-btn" onclick="changes();"><img src="img/dislike.png" alt="dislike"></button>
+        <button class="superlike-btn" onclick="changes();"><img src="img/superlike.png" alt="superlike"></button>
+        <button class="like-btn" onclick="changes();"><img src="img/like.png" alt="like"></button>
+      </div>
+    </div>
   </body>
 </html>
