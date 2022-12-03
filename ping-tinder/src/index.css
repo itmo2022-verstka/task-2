@@ -1,1 +1,127 @@
-/* TODO */
+:root {
+  --image-width: calc(min(90vw, 400px));
+  --button-size: calc(min(20vw, 80px));
+}
+
+body {
+  margin: 0;
+  background: #fff4f4;
+}
+
+h1 {
+  margin: 0;
+}
+
+/*========================== title ======================*/
+.header {
+  background: #5e5e5e;
+  margin-bottom: 10px;
+  padding: 1vh;
+}
+
+.title {
+  margin-top: 0;
+  color: white;
+}
+
+/*========================== content ======================*/
+
+.content {
+  display: block;
+  text-align: center;
+}
+
+/*==================== item ======================*/
+
+.item {
+  margin: 0;
+}
+
+/*==================== image ==========================*/
+
+.item-image {
+  display: inline-block;
+  height: var(--image-width);
+  width: var(--image-width);
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+}
+
+
+.item-image {
+  filter: brightness(100%);
+}
+
+/*==================== name ==========================*/
+
+
+.item-text {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+
+  color: white;
+  font-family: Arial, serif;
+  font-weight: bold;
+  text-align: left;
+}
+
+.item-name {
+  font-size: 30px;
+}
+
+.item-age {
+  font-size: 20px;
+}
+
+
+/*========================== buttons ======================*/
+.item-buttons {
+  width: var(--image-width);
+  display: inline-block;
+}
+
+.item-button {
+  display: inline-block;
+  margin: 5%;
+  background: white;
+  border-radius: 50%;
+  border-style: none;
+  cursor: pointer;
+  height: var(--button-size);
+  width: var(--button-size);
+  box-shadow: 0 5px gray;
+}
+
+.active {
+  box-shadow: 0 2px #666;
+  transform: translateY(3px);
+}
+
+.button-dislike, .button-like, .button-superlike {
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-dislike {
+  background-image: url("../assets/icons/dislike.png");
+}
+
+
+.button-like {
+  background-image: url("../assets/icons/like.png");
+}
+
+.button-superlike {
+  background-image: url("../assets/icons/superlike.png");
+}
+
+
+

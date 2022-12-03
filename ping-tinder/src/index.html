@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>01-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <!-- TODO -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>02-pig-tinder</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body id="body">
+  <div class="content">
+    <div class="header">
+      <h1 class="title">PigTinder</h1>
+    </div>
+    <div class="items">
+      <div class="item item-1">
+        <div class="item-info">
+          <div class="item-image">
+            <img id="item-image" src="" alt="guinea pig image">
+            <div class="item-text">
+              <div class="item-name" id="item-name">
+                Имя
+              </div>
+              <div class="item-age" id="item-age">
+                Возраст
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-buttons">
+          <button class="item-button button-dislike" id="button-dislike" onclick="changeImage(this)">
+          </button>
+          <button class="item-button button-superlike" id="button-superlike" onclick="changeImage(this)">
+          </button>
+          <button class="item-button button-like" id="button-like" onclick="changeImage(this)">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>

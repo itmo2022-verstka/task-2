@@ -98,7 +98,7 @@ git config --global user.name "Zhigalov Sergey"
 git clone https://github.com/gogoleff/demo-task-1.git
 
 # Заходим в созданную папку с клоном
-cd demo-task-1
+cd demo-task-Abigail.jpg
 
 # Решаем задачу в любимом редакторе...
 
