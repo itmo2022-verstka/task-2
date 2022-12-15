@@ -2,10 +2,93 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>01-about-cats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-pig-tinder</title>
     <link rel="stylesheet" href="./index.css">
   </head>
-  <body>
-    <!-- TODO -->
+  <body class="body">
+    <header class="header">
+      <span class="title">PigTinder</span>
+    </header>
+    <main class="web-page">
+        <div class="wrapper">
+          <div class="cards">
+            <div class="card card-1" id="card1">
+              <div class="card-info">
+                <span class="card-name">Туся</span>
+                <span class="card-age">3 года</span>
+              </div>
+            </div>
+            <div class="card card-2" id="card2">
+              <div class="card-info">
+                <span class="card-name">Квинта</span>
+                <span class="card-age">2 года</span>
+              </div>
+            </div>
+            <div class="card card-3" id="card3">
+              <div class="card-info">
+                <span class="card-name">Клёпа</span>
+                <span class="card-age">1 год</span>
+              </div>
+            </div>
+            <div class="card card-4" id="card4">
+              <div class="card-info">
+                <span class="card-name">Лулу</span>
+                <span class="card-age">4 года</span>
+              </div>
+            </div>
+            <div class="card card-5" id="card5">
+              <div class="card-info">
+                <span class="card-name">Нюся</span>
+                <span class="card-age">5 лет</span>
+              </div>
+            </div>
+            <div class="card card-6" id="card6">
+              <div class="card-info">
+                <span class="card-name">Жужа</span>
+                <span class="card-age">1,5 года</span>
+              </div>
+            </div>
+            <div class="card card-7" id="card7">
+              <div class="card-info">
+                <span class="card-name">Мася</span>
+                <span class="card-age">3 года</span>
+              </div>
+            </div>
+            <div class="end" id="end">
+              <div class = "end-border">
+                <h1>Всё !!!</h1>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="buttons-instance-cross" onclick="swipe('left')">
+              <svg class="svg"
+                x="0px" y="0px"
+                   viewBox="0 0 512 512">
+                <polygon style="fill: red" points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512
+                  512,452.922 315.076,256"/>
+              </svg>
+            </button>
+            <button class="buttons-instance-star" onclick="swipe('up')">
+              <svg class="svg"
+                x="0px" y="0px"
+                   viewBox="0 0 53.867 53.867">
+                <polygon style="fill:#EFCE4A;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+                  10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "/>
+              </svg>
+            </button>
+            <button class="buttons-instance-heart" onclick="swipe('right')">
+              <svg class="svg" viewBox="0 0 122.88 107.39">
+                <defs>
+                  <style>.cls-1{fill:#ed1b24;}</style>
+                </defs>
+                <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </main>
+    <script src="index.js"></script>
   </body>
 </html>
