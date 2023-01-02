@@ -7,9 +7,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="title">
+      <h1 class="title">
         PigTinder
-      </div>
+      </h1>
     </header>
 
     <main>
@@ -30,16 +30,30 @@
         </button>
       </div>
       <script>
+        function card(img, name, age) {
+          return {
+            img: img,
+            description: `${name}, ${age} месяцев`
+          }
+        }
+
         let index = 0;
-        const imgNames = ['0.jpg', '1.jpg', '2.jpg', '3.jpg', '4.webp', '5.webp', '6.jpg', '7.jpg']
-        const descriptions = ['Иван, 10 месяцев', 'Антон, 9 месяцев', 'Афанасий, 8 месяцев',
-          'Роман, 7 месяцев', 'Кузьма, 6 месяцев', 'Арсений, 11 месяцев', 'Адольф, 12 месяцев',
-          'Ануфрий, 13 месяцев'];
+        const cards = [
+          card('0.jpg', 'Иван', 10),
+          card('1.jpg', 'Антон', 9),
+          card('2.jpg', 'Афанасий', 8),
+          card('3.jpg', 'Роман', 7),
+          card('4.webp', 'Кузьма', 6),
+          card('5.webp', 'Арсений', 11),
+          card('6.jpg', 'Адольф', 12),
+          card('7.jpg', 'Ануфрий', 13),
+        ]
+
         function next() {
-          index = (index + 1) % imgNames.length;
-          const newUrl = `url('./images/pigs/${imgNames[index]}')`;
+          index = (index + 1) % cards.length;
+          const newUrl = `url('./images/pigs/${cards[index].img}')`;
           document.getElementById('imgContainer').style.backgroundImage = newUrl;
-          document.getElementById('description').textContent = descriptions[index];
+          document.getElementById('description').textContent = cards[index].description;
         }
 
         const container = document.getElementById('imgContainer');
