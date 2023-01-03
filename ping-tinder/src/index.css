@@ -1,9 +1,16 @@
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+
   margin: 0;
 }
 
 .header {
   width: 100%;
+  height: 10%;
 
   background-color: #4c4c4c;
 }
@@ -20,14 +27,12 @@ body {
 }
 
 .page {
-  padding: 0 5%;
+  height: 80%;
+  padding: 10px 20px;
 }
 
 .img-container {
   position: relative;
-
-  width: 100%;
-  margin: 5% auto;
 
   aspect-ratio: 1/1;
 
@@ -54,15 +59,51 @@ body {
   text-shadow: 1px 1px 20px black;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 430px) and (orientation: portrait) {
   .img-container .description {
     font-size: 40px;
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 360px) and (orientation: portrait) {
   .img-container .description {
     font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1030px) and (orientation: landscape) {
+  .img-container .description {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 675px) and (orientation: landscape) {
+  .img-container .description {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 510px) and (orientation: landscape) {
+  .img-container .description {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-height: 405px) {
+  .title {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  .title {
+    font-size: 10px;
   }
 }
 
@@ -70,12 +111,10 @@ body {
   display: flex;
   justify-content: space-around;
 
-  margin: 7% 0;
+  margin: 10px 0;
 }
 
 .buttons button {
-  width: 20%;
-
   border-width: 0;
   border-radius: 50%;
 
@@ -83,6 +122,43 @@ body {
   box-shadow: 0 2px 10px 0 #000000;
 }
 
-.buttons button img {
+.button-icon {
   width: 70%;
+}
+
+@media (orientation: landscape) {
+  .page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .img-container {
+    height: 100%;
+
+    aspect-ratio: 1/1;
+  }
+
+  .buttons {
+    flex-direction: column;
+
+    width: 10%;
+    height: 100%;
+
+    margin-left: 20px;
+  }
+
+  .buttons button {
+    display: block;
+
+    width: 100%;
+
+    margin-left: auto;
+  }
+}
+
+@media (orientation: portrait) {
+  .img-container {
+    width: 100%;
+  }
 }
