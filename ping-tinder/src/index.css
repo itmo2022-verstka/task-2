@@ -147,14 +147,6 @@ body {
 
     margin-left: 20px;
   }
-
-  .buttons button {
-    display: block;
-
-    width: 100%;
-
-    margin-left: auto;
-  }
 }
 
 @media (orientation: portrait) {
