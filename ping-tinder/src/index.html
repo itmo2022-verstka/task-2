@@ -7,6 +7,53 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
+		
+	<h1 class="header">PigTinder</h1>
+	
+	<ul class="info_block">
+		<li class="pig-wrap">
+			<div class="pig" id="pig1" style="display: block;">
+				<img class="pig-img" src="pig1.jpg" alt="Морская свинка Наташа">
+				<p class="pig-name">&nbsp;&nbsp;Наташа, 1 год<br>&nbsp;&nbsp;Санкт-Петербург, Россия</p>
+			</div>
+			<div class="pig" id="pig2">
+				<img class="pig-img" src="pig2.jpg" alt="Морская свинка Маша">
+				<p class="pig-name">&nbsp;&nbsp;Маша, 1 год 3 месяца<br>&nbsp;&nbsp;Нью-Йорк, США</p>
+			</div>
+			<div class="pig" id="pig3">
+				<img class="pig-img" src="pig3.jpg" alt="Морская свинка Нюша">
+				<p class="pig-name">&nbsp;&nbsp;Нюша, 9 месяцев<br>&nbsp;&nbsp;Астана, Казахстан</p>
+			</div>
+			<div class="pig" id="pig4">
+				<img class="pig-img" src="pig4.jpg" alt="Морская свинка Ксюша">
+				<p class="pig-name">&nbsp;&nbsp;Ксюша, 1.5 года<br>&nbsp;&nbsp;Париж, Франция</p>
+			</div>
+			<div class="pig" id="pig5">
+				<img class="pig-img" src="pig5.jpg" alt="Морская свинка Саша">
+				<p class="pig-name">&nbsp;&nbsp;Саша, 1 год<br>&nbsp;&nbsp;Рим, Италия</p>
+			</div>
+			<div class="pig" id="pig6">
+				<img class="pig-img" src="pig6.jpg" alt="Морская свинка Ира">
+				<p class="pig-name">&nbsp;&nbsp;Ира, 1 год<br>&nbsp;&nbsp;Мюнхен, Германия</p>
+			</div>
+			<div class="pig" id="pig7">
+				<img class="pig-img" src="pig7.jpg" alt="Морская свинка Света">
+				<p class="pig-name">&nbsp;&nbsp;Света, 1 год<br>&nbsp;&nbsp;Осло, Норвегия</p>
+			</div>
+			<div class="pig" id="pig8">
+				<img class="pig-img" src="pig8.jpg" alt="Морская свинка Кира">
+				<p class="pig-name">&nbsp;&nbsp;Кира, 1 год<br>&nbsp;&nbsp;Монреаль, Канада</p>
+			</div>
+		</li>
+		<li class="buttons-wrap">
+			<div class="buttons">
+				<div class="tap" id="icon1" onclick="tap_1()"><img class="icon" src="1no.png" alt="No"></div>
+				<div class="tap" id="icon2" onclick="tap_2()"><img class="icon" src="2superlike.png" alt="super-like"></div>
+				<div class="tap" id="icon3" onclick="tap_3()"><img class="icon" src="3like.png" alt="like"></div>
+			</div>
+		</li>
+	</ul>
+	
 	<script>
 		
 		document.addEventListener('touchstart', handleTouchStart, false)        
@@ -138,52 +185,6 @@
 			}
 		}
 	</script>
-	
-	<h1 class="header">PigTinder</h1>
-	
-	<ul class="info_block">
-		<li class="pig-wrap">
-			<div class="pig" id="pig1" style="display: block;">
-				<img class="pig-img" src="pig1.jpg" alt="Морская свинка Наташа">
-				<p class="pig-name">&nbsp;&nbsp;Наташа, 1 год<br>&nbsp;&nbsp;Санкт-Петербург, Россия</p>
-			</div>
-			<div class="pig" id="pig2">
-				<img class="pig-img" src="pig2.jpg" alt="Морская свинка Маша">
-				<p class="pig-name">&nbsp;&nbsp;Маша, 1 год 3 месяца<br>&nbsp;&nbsp;Нью-Йорк, США</p>
-			</div>
-			<div class="pig" id="pig3">
-				<img class="pig-img" src="pig3.jpg" alt="Морская свинка Нюша">
-				<p class="pig-name">&nbsp;&nbsp;Нюша, 9 месяцев<br>&nbsp;&nbsp;Астана, Казахстан</p>
-			</div>
-			<div class="pig" id="pig4">
-				<img class="pig-img" src="pig4.jpg" alt="Морская свинка Ксюша">
-				<p class="pig-name">&nbsp;&nbsp;Ксюша, 1.5 года<br>&nbsp;&nbsp;Париж, Франция</p>
-			</div>
-			<div class="pig" id="pig5">
-				<img class="pig-img" src="pig5.jpg" alt="Морская свинка Саша">
-				<p class="pig-name">&nbsp;&nbsp;Саша, 1 год<br>&nbsp;&nbsp;Рим, Италия</p>
-			</div>
-			<div class="pig" id="pig6">
-				<img class="pig-img" src="pig6.jpg" alt="Морская свинка Ира">
-				<p class="pig-name">&nbsp;&nbsp;Ира, 1 год<br>&nbsp;&nbsp;Мюнхен, Германия</p>
-			</div>
-			<div class="pig" id="pig7">
-				<img class="pig-img" src="pig7.jpg" alt="Морская свинка Света">
-				<p class="pig-name">&nbsp;&nbsp;Света, 1 год<br>&nbsp;&nbsp;Осло, Норвегия</p>
-			</div>
-			<div class="pig" id="pig8">
-				<img class="pig-img" src="pig8.jpg" alt="Морская свинка Кира">
-				<p class="pig-name">&nbsp;&nbsp;Кира, 1 год<br>&nbsp;&nbsp;Монреаль, Канада</p>
-			</div>
-		</li>
-		<li>
-			<div class="buttons">
-				<div class="tap" id="icon1" onclick="tap_1()"><img class="icon" src="1no.png" alt="No"></div>
-				<div class="tap" id="icon2" onclick="tap_2()"><img class="icon" src="2superlike.png" alt="super-like"></div>
-				<div class="tap" id="icon3" onclick="tap_3()"><img class="icon" src="3like.png" alt="like"></div>
-			</div>
-		</li>
-	</ul>
 	
   </body>
 </html>
