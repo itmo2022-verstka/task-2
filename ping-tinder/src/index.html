@@ -2,32 +2,27 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>01-about-cats</title>
+    <title>02-pig-tinder</title>
     <link rel="stylesheet" href="./index.css">
     <script src="js/swipe.js"></script>
   </head>
   <body>
-
-    <header class="header">
-      PigTinder
-    </header>
-
-    <div class="cards">
-      <div class="card">
-        <img id="image" src="img/1.jpg" alt="swin">
-        <div class="textblock">
-          <p id="name">Евдокия</p>
-          <p id="description">Безработная, 1 месяц</p>
-        </div>
+  <header class="title"> PigTinder </header>
+  <main class="cards">
+    <div class="card">
+      <img id="image" class="image" src="img/1.jpg" alt="swin">
+      <div class="textblock">
+        <p class="name">Евдокия</p>
+        <p class="description">Безработная, 1 месяц</p>
       </div>
     </div>
-
-    <div class="buttons__wrapper">
-      <div class="buttons">
-        <button class="dislike-btn" onclick="changes();"><img src="img/dislike.png" alt="dislike"></button>
-        <button class="superlike-btn" onclick="changes();"><img src="img/superlike.png" alt="superlike"></button>
-        <button class="like-btn" onclick="changes();"><img src="img/like.png" alt="like"></button>
-      </div>
+  </main>
+  <section class="buttons__wrapper">
+    <div class="buttons">
+      <button class="dislike-btn" onclick="changes();"><img src="img/dislike.png" alt="dislike"></button>
+      <button class="superlike-btn" onclick="changes();"><img src="img/superlike.png" alt="superlike"></button>
+      <button class="like-btn" onclick="changes();"><img src="img/like.png" alt="like"></button>
     </div>
+  </section>
   </body>
 </html>

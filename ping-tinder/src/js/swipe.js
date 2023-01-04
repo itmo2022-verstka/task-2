@@ -1,19 +1,7 @@
 // Новая картинка
-var i = 0;
-var img_arr = new Array('1.jpg',
-  '2.jpg',
-  '3.jpg',
-  '4.jpg',
-  '5.jpg',
-  '6.jpg',
-  '7.jpg',
-  '8.jpg',
-  '9.jpg',
-  '10.jpg',
-  '0.jpg',
-);
 
 var name_arr = new Array(
+  'Матильда',
   'Евдокия',
   'Василиса',
   'Богдана',
@@ -23,11 +11,11 @@ var name_arr = new Array(
   'Жанна',
   'Любовь',
   'Клавдия',
-  'Лидия',
-  'Матильда'
+  'Лидия'
 )
 
 var description_arr = new Array(
+  'Студент, голодный',
   'Безработная, 1 месяц',
   'Меломанка, 2 месяца',
   'Роковая красотка, 3 месяца',
@@ -37,22 +25,34 @@ var description_arr = new Array(
   'Модель, 7 месяцев',
   'Художница, 8 месяцев',
   'Лягушка, 9 месяцев',
-  'Бутерброд, 10 месяцев',
-  'Студент, голодный'
+  'Бутерброд, 10 месяцев'
 )
+
+var i = 0;
+var img_arr = Array();
+for (let k = 0; k < 11; k++) {
+  img_arr.push(new Object(`${k}.jpg`));
+  img_arr[k].name_arr = name_arr[k];
+  img_arr[k].description_arr = description_arr[k];
+} //это занимает больше по памяти, я не совсем поняла что хотелось наверное
+
+console.log(img_arr)
+
 
 // Свайп
 
 function changes() {
   var image = document.getElementById("image");
-  var name = document.getElementById("name");
-  var descript = document.getElementById("description");
+  var name = document.getElementsByClassName("name")[0];
+  var descript = document.getElementsByClassName("description")[0];
   if (i === img_arr.length) i = 0;
   image.src = `img/${img_arr[i]}`;
-  name.textContent = name_arr[i];
-  descript.textContent = description_arr[i];
+  name.textContent = img_arr[i].name_arr;
+  descript.textContent = img_arr[i].description_arr;
   i++;
 }
+
+/* 
 
 document.addEventListener('touchstart', startCoordinates, false);
 document.addEventListener('touchmove', checkSwipe, false);
@@ -90,3 +90,4 @@ function checkSwipe(event) {
   x = null;
   y = null;
 };
+*/
