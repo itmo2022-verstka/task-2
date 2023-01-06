@@ -22,15 +22,13 @@ header {
   left: 0;
   z-index: 4;
 
-  max-height: 10vh;
-
   border-bottom: 1px solid var(--border-color);
 
   background-color: #333333;
 }
 
-header h1 {
-  color: white;
+.pigTinderHeader {
+  color: #ffffff;
   font-family: PT SansNarrow, sans-serif;
   font-size: 62px;
   text-align: center;
@@ -42,7 +40,7 @@ a {
 
 .carusel .carusel__item {
   position: absolute;
-  top: 20vh;
+  top: 20%;
   right: 0;
   left: 0;
   z-index: -1;
@@ -73,6 +71,10 @@ a {
   display: none;
 }
 
+label img {
+  width: var(--img-with);
+}
+
 .carusel label {
   position: absolute;
   top: calc(40vh + var(--max-height));
@@ -90,8 +92,6 @@ a {
 }
 
 .carusel input:checked + label + label + label + div + input + label img {
-  width: var(--img-with);
-
   border-radius: 70%;
 
   background-color: white;
@@ -106,8 +106,6 @@ a {
 }
 
 .carusel input:checked + label + label + label + div + input + label + label img {
-  width: var(--img-with);
-
   border-radius: 70%;
 
   background-color: white;
@@ -122,8 +120,6 @@ a {
 }
 
 .carusel input:checked + label + label + label + div + input + label + label + label img {
-  width: var(--img-with);
-
   border-radius: 70%;
 
   background-color: white;
@@ -184,7 +180,7 @@ a {
 .carusel input:checked + label + label + label + div .carusel__item .description {
   position: absolute;
   bottom: 0;
-  left: 10vw;
+  left: 50px;
   z-index: 3;
 
   display: block;
@@ -212,4 +208,59 @@ a {
 
   font-size: 62px;
   font-weight: normal;
+}
+
+@media (min-width: 900px) and (max-height: 800px) {
+  .pigTinderHeader {
+    font-size: 30px;
+  }
+
+  .carusel__item .description {
+    font-size: 15px;
+  }
+
+  .carusel input:checked + label + label + label + div .carusel__item .description {
+    left: 14px;
+
+    font-size: 15px;
+  }
+
+  .carusel label {
+    top: calc(40vh + 150px);
+  }
+
+  .label_img {
+    width: 100px;
+  }
+
+  .carusel input:checked + label + label + label + div + input + label {
+    left: calc(50% - 100px * 2);
+  }
+
+  .carusel input:checked + label + label + label + div + input + label + label {
+    left: calc(50% - 100px / 2);
+  }
+
+  .carusel input:checked + label + label + label + div + input + label + label + label {
+    left: calc(50% + 100px);
+  }
+
+  .carusel input:checked + label + label + label + div + input + label + label + label img {
+    border-radius: 70%;
+
+    background-color: white;
+    box-shadow: 0 0 20px black;
+  }
+}
+
+@media (min-width: 900px) and (min-height: 550px) and (max-height: 800px) {
+  .carusel label {
+    top: calc(40vh + 200px);
+  }
+}
+
+@media (min-width: 900px) and (min-height: 650px) and (max-height: 800px) {
+  .carusel label {
+    top: calc(40vh + 260px);
+  }
 }
