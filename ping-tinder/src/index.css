@@ -1,1 +1,172 @@
-/* TODO */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    font-family: "PT SansNarrow", sans-serif;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    z-index: 1000;
+}
+
+
+.tinder {
+    padding-top: 30px;
+}
+
+.tinder .pig-checkbox {
+    display: none;
+}
+
+.tinder .cards {
+    position: relative;
+}
+
+.cards .card {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.cards .card .info {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 3rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 0, 0));
+}
+
+.cards .card .picture img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.cards .card,
+.cards .card .picture,
+.cards .card .picture img {
+    height: 100%;
+}
+
+.buttons {
+    display: none;
+    font-size: 4rem;
+}
+
+.buttons .button {
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.05s ease-in-out;
+}
+
+.buttons .button:hover,
+.buttons .button:active {
+    background-color: rgba(205, 92, 92, 0.7);
+}
+
+.buttons .button:active {
+    box-shadow: none;
+}
+
+@media (orientation: portrait) {
+    .tinder {
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .cards {
+        max-height: 80vw;
+        height: 100vw;
+    }
+
+    .cards,
+    .buttons {
+        max-width: 80vw;
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .buttons {
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (orientation: landscape) {
+    .tinder {
+        margin-top: 4rem;
+        align-items: center;
+        height: calc(80vh - 1.5rem);
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .cards {
+        height: calc(80vh - 1.5rem);
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+    }
+
+    .buttons {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        font-size: 2rem;
+    }
+
+    .buttons .button {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .header {
+        font-size: 1.5rem;
+    }
+
+    .cards .card .info {
+        font-size: 1.5rem;
+    }
+
+    .cards,
+    .buttons {
+        height: calc(100vh - 70px);
+        max-height: 90vh;
+    }
+}
+
+input#pig1:checked~.cards .card1,
+input#pig2:checked~.cards .card2,
+input#pig3:checked~.cards .card3,
+input#pig4:checked~.cards .card4,
+input#pig5:checked~.cards .card5,
+input#pig6:checked~.cards .card6,
+input#pig7:checked~.cards .card7,
+input#pig8:checked~.cards .card8 {
+    visibility: visible;
+    opacity: 1;
+}
+
+input#pig1:checked~.sectionButtons .buttons2,
+input#pig2:checked~.sectionButtons .buttons3,
+input#pig3:checked~.sectionButtons .buttons4,
+input#pig4:checked~.sectionButtons .buttons5,
+input#pig5:checked~.sectionButtons .buttons6,
+input#pig6:checked~.sectionButtons .buttons7,
+input#pig7:checked~.sectionButtons .buttons8 {
+    display: flex;
+}
