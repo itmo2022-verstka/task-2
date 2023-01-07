@@ -1,37 +1,20 @@
-function dislike() {
-  nextCard("icon1")
+function change(id) {
+  let num = id[id.length - 1];
+  let id1 = id.substring(0, 3) + (num % 8 + 1);
+  document.getElementById(id).style.zIndex = 1
+  document.getElementById(id1).style.display = "block"
+  document.getElementById(id).style.zIndex = 0
+  document.getElementById(id).style.display = "none"
 }
 
-function superLike() {
-  nextCard("icon2")
-}
-
-function like() {
-  nextCard("icon3")
-}
-
-
-function nextCardId(id) {
-  let num = parseInt(id.substring(3))
-  num = num % 8 + 1
-  return id.substring(0, 3) + num
-}
-
-function change(id, id1) {
-  let id2 = nextCardId(id1)
-  document.getElementById(id1).style.zIndex = 1
-  document.getElementById(id2).style.display = "block"
-  document.getElementById(id1).style.zIndex = 0
-  document.getElementById(id1).style.display = "none"
-}
-
-function nextCard(id) {
-  let start = "pig1"
-  while (true) {
-    if (document.getElementById(start).style.display === "block") {
-      change(id, start)
+function nextCard() {
+  let pig = "pig1"
+  for (let i = 1; i <= 9; i++) {
+    if (document.getElementById(pig).style.display === "block") {
+      change(pig)
       break;
+    } else {
+      pig = pig.substring(0,3) + i;
     }
-    start = nextCardId(start)
   }
 }
