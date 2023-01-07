@@ -45,14 +45,13 @@ h1 {
   width: var(--image-width);
 }
 
-img {
+.item-image img {
   display: block;
   object-fit: cover;
   border-radius: 10%;
   height: 100%;
   width: 100%;
 }
-
 
 .item-image {
   filter: brightness(100%);
@@ -123,5 +122,20 @@ img {
   background-image: url("../assets/icons/superlike.png");
 }
 
+@media screen and (orientation:landscape) and (max-width: 1000px) {
+  .item-info, .item-buttons {
+    display: inline-block;
+  }
 
+  :root {
+    --image-width: calc(max(60vh, 200px));
+    --button-size: calc(max(10vh, 60px));
+  }
+}
 
+@media screen and (orientation:portrait) {
+  :root {
+    --image-width: calc(min(90vw, 400px));
+    --button-size: calc(min(15vw, 80px));
+  }
+}
