@@ -5,11 +5,6 @@
   --header-padding: 0.25em
 }
 
-.root {
-  position: fixed;
-  background-color: brown;
-}
-
 .header {
   position: fixed;
   top: 0;
