@@ -1,28 +1,26 @@
 body {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: stretch;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  height: 100%;
+  height: 100vh;
   margin: 0;
 
-  background-color: lightgray;
+  background-color: #d3d3d3ff;
 }
 
-header {
-  background-color: dimgrey;
-  color: lightgray;
+#name-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #696969ff;
+  color: #d3d3d3ff;
   font-family: Georgia, sans-serif;
-  font-size: calc(10px + 25 * (100vw / 650));
+  font-size: 5vw;
   text-align: center;
 }
 
@@ -48,13 +46,17 @@ main {
 }
 
 .img-wrapper {
+  position: relative;
+
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-evenly;
+
+  margin: 0;
 }
 
 .pig-images {
-  width: 100%;
+  width: 90vw;
   height: auto;
 
   aspect-ratio: 1/1;
@@ -71,8 +73,6 @@ main {
   align-content: center;
   align-items: stretch;
   justify-content: space-evenly;
-
-  padding: 5% 0;
 }
 
 .grade-buttons {
@@ -85,7 +85,7 @@ main {
 
   border-radius: 30px;
 
-  background-color: darkgrey;
+  background-color: #a9a9a9ff;
 }
 
 .carousel {
@@ -93,28 +93,113 @@ main {
   flex-direction: column;
   justify-content: center;
 
+  height: 75vh;
+
   margin: 10px;
 }
 
 .carousel-item {
   flex-direction: column;
-
-  padding: 5%;
+  align-items: center;
+  justify-content: center;
 }
 
 .text {
   position: absolute;
-
-  padding: 5%;
+  top: 0;
+  left: 0;
 
   color: snow;
   font-family: Georgia, sans-serif;
-  font-size: calc(10px + 20 * (100vw / 650));
+  font-size: 8vw;
+}
+
+@media (min-device-width: 1081px) {
+  .carousel-item,
+  .text {
+    padding: 20px;
+  }
+}
+
+@media (max-device-width: 1080px) {
+  .carousel-item,
+  .text {
+    padding: 15px;
+  }
+}
+
+@media (max-device-width: 720px) {
+  .carousel-item,
+  .text {
+    padding: 10px;
+  }
+}
+
+@media (max-device-width: 640px) {
+  .carousel-item,
+  .text {
+    padding: 5px;
+  }
+}
+
+@media (max-aspect-ratio: 3/5) {
+  body {
+    flex-wrap: wrap;
+  }
 }
 
 @media (min-aspect-ratio: 3/5) {
+  .pig-images {
+    width: 75vw;
+  }
   .carousel {
     flex-direction: row;
+  }
+  .buttons-group {
+    flex-direction: column;
+  }
+}
+
+@media (min-aspect-ratio: 1/1) {
+  .pig-images {
+    width: auto;
+    height: 70vh;
+  }
+
+  .text {
+    font-size: 8vh;
+  }
+
+  .header-text {
+    font-size: 6vh;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+  }
+
+  body {
+    flex-direction: row;
+  }
+
+  .carousel {
+    flex-direction: column;
+
+    width: 95vw;
+    height: auto;
+  }
+  .buttons-group {
+    flex-direction: row;
+  }
+}
+
+@media (min-aspect-ratio: 5/3) {
+  .pig-images {
+    height: 95vh;
+  }
+
+  .carousel {
+    flex-direction: row;
+
+    width: 80vw;
   }
   .buttons-group {
     flex-direction: column;
