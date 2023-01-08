@@ -1,1 +1,131 @@
-/* TODO */
+  html {
+    height: 100%;
+  }
+  .pig-tinder {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    margin: 0 auto;
+    font-family: 'Varela Round', sans-serif;
+    border-radius: 10px;
+  }
+
+  .header {
+    padding: 5px 10px;
+    border-bottom: solid 2px #f2f2f2;
+  }
+  .header:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .header .side-button {
+    display: flex;
+    border: solid 9px #efefef;
+    border-radius: 40px;
+    cursor: pointer;
+    float: left;
+  }
+  .header h2 {
+    margin: 0 0;
+    float: right;
+  }
+
+  .sidenav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #aaa;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .cards {
+    flex-grow: 1;
+  }
+  .cards .card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 50vh;
+
+    margin: 7px auto;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    background-color: #ccc;
+  }
+  .cards .card:not(#pig1) {
+    display: none;
+  }
+  .cards .card #pig0 {
+    background: #fff;
+  }
+  .cards .info {
+    border: solid 3px #ccc;
+    background: #fff;
+    padding: 10px;
+  }
+  .cards .info h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .cards .info p {
+    margin: 0;
+    font-size: 13px;
+    color: gray;
+  }
+  .cards .card img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+
+    object-fit: cover;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 500px;
+    margin: 0px auto;
+  }
+  .buttons .button {
+    display: flex;
+    border: solid 9px #ccc;
+    background-color: #ccc;
+    border-radius: 40px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  .buttons .button.no, .button.yes {
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+  }
+
+  

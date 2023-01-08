@@ -2,10 +2,118 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>01-about-cats</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>02-pig-tinder</title>
     <link rel="stylesheet" href="./index.css">
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
-    <!-- TODO -->
+
+    <main class="pig-tinder">
+
+    <header class="header">
+      <button class="side-button" onclick="openNav()">⚙️</button>
+      <h2>Pig🐹Tinder</h2>
+    </header>
+
+    <aside id="mySidenav" class="sidenav">
+      <h2>Favourites</h2> 
+      <a class="closebtn" onclick="closeNav()">&times;</a>
+    </aside>
+
+    <section class="cards">
+
+      <div class="card" id="pig1">
+        <div class="img-container">
+          <img src="../../task-img/pigs/1.jpg">
+        </div>
+        <div class="info">
+          <h2>Luna</h2>
+          <p>12 months</p>
+        </div>
+      </div>
+
+      <div class="card" id="pig2">
+        <div class="img-container">
+          <img src="../../task-img/pigs/2.jpg">
+        </div>
+        <div class="info">
+          <h2>Bella</h2>
+          <p>6 months</p>
+        </div>
+      </div>
+
+      <div class="card" id="pig3">
+        <div class="img-container">
+          <img src="../../task-img/pigs/3.jpg">
+        </div>
+        <div class="info">
+          <h2>Beth</h2>
+          <p>8 months</p>
+        </div>
+      </div>
+
+      <div class="card" id="pig4">
+        <div class="img-container">
+          <img src="../../task-img/pigs/4.jpg">
+        </div>
+        <div class="info">
+          <h2>Willow</h2>
+          <p>10 months</p>
+        </div>
+      </div>
+
+      <div class="card" id="pig5">
+        <div class="img-container">
+          <img src="../../task-img/pigs/5.jpg">
+        </div>
+        <div class="info">
+          <h2>Lily</h2>
+          <p>7 months</p>
+        </div>
+      </div>
+
+      <div class="card" id="pig6">
+        <div class="img-container">
+          <img src="../../task-img/pigs/6.jpg">
+        </div>
+        <div class="info">
+          <h2>Daisy</h2>
+          <p>5 months</p>
+        </div>
+      </div>
+
+      <div class="card" id="pig7">
+        <div class="img-container">
+          <img src="../../task-img/pigs/7.jpg">
+        </div>
+        <div class="info">
+          <h2>Rosie</h2>
+          <p>10 months</p>
+        </div>
+      </div>
+
+      <div class="card" id="pig0">
+        <h2>No more matches<h2>
+      </div>
+
+    </section>
+
+    <footer class="buttons">
+      <button class="button redo" onclick="refreshSuggests()">
+        🔄
+      </button>
+      <button class="button no" onclick="animateOnClick('No')">
+        ❌
+      </button>
+      <button class="button yes" onclick="animateOnClick('Yes')">
+        ❤️
+      </button>
+      <button class="button star" onclick="addToFavourites()">
+        ⭐
+      </button>
+    </footer>
+  </main>
+  
   </body>
 </html>
