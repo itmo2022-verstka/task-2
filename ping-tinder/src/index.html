@@ -7,79 +7,8 @@
     <link rel="stylesheet" href="./index.css">
   </head>
 
-  <script>
-    const pictures = ["1.jpg", "2.jpg", "3.jpg",
-                      "4.jpg", "5.jpg", "6.jpg",
-                      "7.jpg", "8.jpg", "9.jpg",
-                      "10.png", "11.jpg", "12.jpg"];
-    const descriptions = ["Lorem, 4 years",
-                          "Rolem, 5 years",
-                          "Morem, 6 years",
-                          "Rorem, 7 years",
-                          "MMorem, 1 years",
-                          "WWorem, 2 years",
-                          "MMorem, 3 years",
-                          "Worem, 4 years",
-                          "MMorem, 6 years",
-                          "Worem, 1 years",
-                          "MMorem, 3 years",
-                          "WWorem, 4 years"]
-    let ind = 0;
-
-    function nextPicture() {
-      ind++;
-      if (ind >= pictures.length) {
-        ind = 0;
-      }
-      const url = `./public/${pictures[ind]}`;
-      console.log(document.getElementById('pig-img'));
-
-      document.getElementById('pig-img').setAttribute('src', url);
-      document.getElementById('description').textContent = descriptions[ind];
-    }
-
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
-    let xDown = null;
-    let yDown = null;
-
-    function getTouches(evt) {
-      return evt.touches;
-    }
-
-    function handleTouchStart(evt) {
-      const firstTouch = getTouches(evt)[0];
-      xDown = firstTouch.clientX;
-      yDown = firstTouch.clientY;
-    }
-
-    function handleTouchMove(evt) {
-      if ( ! xDown || ! yDown ) {
-        return;
-      }
-
-      const xUp = evt.touches[0].clientX;
-      const yUp = evt.touches[0].clientY;
-
-      const xDiff = xDown - xUp;
-      const yDiff = yDown - yUp;
-
-      if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-        if ( xDiff > 0 ) {
-          nextPicture();
-
-        } else {
-          nextPicture();
-
-        }
-      }
-      xDown = null;
-      yDown = null;
-    }
-  </script>
-
   <body>
-  <header>СвиноТиндер</header>
+  <header><h3 class="title">СвиноТиндер</h3></header>
     <div class="content">
 
 
@@ -104,3 +33,72 @@
     </div>
   </body>
 </html>
+<script>
+  const pictures = ["1.jpg", "2.jpg", "3.jpg",
+    "4.jpg", "5.jpg", "6.jpg",
+    "7.jpg", "8.jpg", "9.jpg",
+    "10.png", "11.jpg", "12.jpg"];
+  const descriptions = ["Lorem, 4 years",
+    "Rolem, 5 years",
+    "Morem, 6 years",
+    "Rorem, 7 years",
+    "MMorem, 1 years",
+    "WWorem, 2 years",
+    "MMorem, 3 years",
+    "Worem, 4 years",
+    "MMorem, 6 years",
+    "Worem, 1 years",
+    "MMorem, 3 years",
+    "WWorem, 4 years"]
+  let ind = 0;
+
+  function nextPicture() {
+    ind++;
+    if (ind >= pictures.length) {
+      ind = 0;
+    }
+
+    document.getElementById('pig-img').setAttribute('src', `./public/${pictures[ind]}`);
+    document.getElementById('description').textContent = descriptions[ind];
+  }
+
+  document.addEventListener('touchstart', handleTouchStart, false);
+  document.addEventListener('touchmove', handleTouchMove, false);
+  let xDown = null;
+  let yDown = null;
+
+  function getTouches(evt) {
+    return evt.touches;
+  }
+
+  function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
+  }
+
+  function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+      return;
+    }
+
+    const xUp = evt.touches[0].clientX;
+    const yUp = evt.touches[0].clientY;
+
+    const xDiff = xDown - xUp;
+    const yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+      if ( xDiff > 0 ) {
+        nextPicture();
+
+      } else {
+        nextPicture();
+
+      }
+    }
+    xDown = null;
+    yDown = null;
+  }
+</script>
+
