@@ -2,14 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>01-about-cats</title>
+    <title>02-pig-tinder</title>
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
     <header class="tinder-header">
-      PigTinder
+      <h1 class="app-name">PigTinder</h1>
     </header>
-    <main>
+    <main class="page-content-container">
       <section class="image-section" id="image-section">
         <img class="pig-picture" id="pig-picture" src="../../task-img/pig1.jpg" alt="pig1">
         <section class="shadow-section">
@@ -29,7 +29,6 @@
         </section>
       </section>
       <nav class="move-buttons">
-        <section class="empty"></section>
         <button class="dislike move-button" onclick="swipeLeft()">
           <img class="dislike-image" src="../../task-img/free-icon-error-483328.png" alt="dislike">
         </button>
@@ -60,7 +59,6 @@
         ];
 
         function nextPic(imageIn, nameIn, ageIn, next) {
-          console.log('kek');
           if (next) {
             counter++;
           }

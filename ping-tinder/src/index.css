@@ -1,15 +1,23 @@
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 
+  width: 100%;
   margin: 0;
 
   font-family: arial, sans-serif;
 }
 
+.page-content-container {
+  display: flex;
+}
+
 .image-section {
   position: relative;
+}
 
-  margin: 5vw 5vw 0;
+.image-section,
+.moving-section {
+  background-image: url('../../task-img/back.jpg');
 }
 
 .moving-section.animate-left-swipe {
@@ -31,24 +39,20 @@ body {
 .moving-section {
   position: absolute;
   top: 0;
+
+  width: 100%;
+  height: 100%;
 }
 
 .pig-picture {
   display: inline-block;
 
-  width: 90vw;
-  height: 60vh;
+  width: 100%;
 
-  -webkit-box-shadow: 0 3px 8px 4px rgba(52, 52, 52, 0.2);
-  -moz-box-shadow: 0 3px 8px 4px rgba(52, 52, 52, 0.2);
-  box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset, 0 3px 8px 4px rgba(52, 52, 52, 0.2);
-
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .moving-section .pig-picture {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -60,7 +64,8 @@ body {
   width: 100%;
   height: 100%;
 
-  background: linear-gradient(to top, rgba(10, 10, 10, 10), rgba(0, 0, 0, 0) 25%);
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.4), rgba(0, 0, 0, 0) 25%),
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(0, 0, 0, 0) 15%);
   color: white;
   font-size: 2.5rem;
 }
@@ -79,42 +84,41 @@ body {
   font-size: 4rem;
 }
 
+.app-name {
+  margin: 0;
+}
+
 .tinder-header {
+  height: 5vh;
   padding: 2vh;
 
-  background-color: rgb(61, 61, 61);
-  color: white;
-  font-size: 5rem;
+  background-color: #3d3d3d;
+  color: #ffffff;
+  font-size: 2vh;
   text-align: center;
 }
 
 .move-buttons {
-  text-align: center;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
 
 .move-button {
-  width: 20vw;
-  height: 20vw;
-  margin: 3vw;
+  margin: 3%;
+
   padding: 0;
 
   border: none;
 
   border-radius: 100%;
 
-  -webkit-box-shadow: 0 0 18px 8px rgba(52, 52, 52, 0.2);
-  -moz-box-shadow: 0 0 18px 8px rgba(52, 52, 52, 0.2);
   box-shadow: 0 0 18px 8px rgba(52, 52, 52, 0.2);
 }
 
 .move-button:active {
   opacity: 0.75;
-}
-
-.empty {
-  display: inline-block;
-
-  height: 20vh;
 }
 
 .like-image,
@@ -126,4 +130,62 @@ body {
   border-radius: 100%;
 
   object-fit: cover;
+}
+
+@media screen and (orientation: portrait) {
+  .page-content-container {
+    flex-direction: column;
+  }
+
+  .image-section,
+  .pig-picture {
+    height: 60vh;
+  }
+
+  .move-buttons {
+    flex-direction: row;
+
+    height: 28vh;
+  }
+
+  .move-button {
+    width: 20%;
+  }
+
+  .image-section {
+    width: 90%;
+    margin: 2vh 5vw 0;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .page-content-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5%;
+  }
+
+  .image-section,
+  .move-buttons,
+  .pig-picture {
+    height: 85vh;
+  }
+
+  .image-section {
+    width: 70%;
+    margin: 3vh 0;
+  }
+
+  .move-buttons {
+    flex-direction: column-reverse;
+
+    gap: 3%;
+  }
+
+  .move-button {
+    width: auto;
+    height: 20%;
+  }
 }
