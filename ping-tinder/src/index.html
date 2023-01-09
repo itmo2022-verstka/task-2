@@ -6,6 +6,32 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <!-- TODO -->
+    <header class="header-style">
+      <span>PigTinder</span>
+    </header>
+
+    <div class="wrapper-photo">
+      <div class="photo" id="pig-photo">
+        <div class="name" id="pig-name">Григориана</div>
+        <div class="age" id="pig-age">10 месяцев</div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <input class="button-input" type="image" name="btn" id="no" alt="btn" onclick="nextPig()">
+      <label for="no">
+        <img class="control-button" src="img/no.png" alt="no-solution">
+      </label>
+      <input class="button-input" type="image" name="btn" id="star" alt="btn" onclick="nextPig()">
+      <label for="star">
+        <img class="control-button" src="img/star.png" alt="star-solution">
+      </label>
+      <input class="button-input" type="image" name="btn" id="like" alt="btn" onclick="nextPig()">
+      <label for="like">
+        <img class="control-button" src="img/like.png" alt="like-solution">
+      </label>
+
+      <script src="index.js"></script>
+    </div>
   </body>
 </html>
