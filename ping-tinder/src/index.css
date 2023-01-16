@@ -54,8 +54,14 @@ header {
   left: 0;
   color: white;
   padding-bottom: 20px;
-  font-size: 5vmax;
+  font-size: 5vw;
   padding-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .img-container .description {
+    font-size: 30px;
+  }
 }
 
 

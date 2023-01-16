@@ -34,32 +34,29 @@
   </body>
 </html>
 <script>
-  const pictures = ["1.jpg", "2.jpg", "3.jpg",
-    "4.jpg", "5.jpg", "6.jpg",
-    "7.jpg", "8.jpg", "9.jpg",
-    "10.png", "11.jpg", "12.jpg"];
-  const descriptions = ["Lorem, 4 years",
-    "Rolem, 5 years",
-    "Morem, 6 years",
-    "Rorem, 7 years",
-    "MMorem, 1 years",
-    "WWorem, 2 years",
-    "MMorem, 3 years",
-    "Worem, 4 years",
-    "MMorem, 6 years",
-    "Worem, 1 years",
-    "MMorem, 3 years",
-    "WWorem, 4 years"]
+  const data = [
+    {descriptions:"Lorem, 4 years", url: "1.jpg"},
+    {descriptions:"Rorem, 4 years", url: "2.jpg"},
+    {descriptions:"LoWem, 5 years", url: "3.jpg"},
+    {descriptions:"LoFem, 6 years", url: "4.jpg"},
+    {descriptions:"LoWem, 7 years", url: "5.jpg"},
+    {descriptions:"LorFm, 4 years", url: "6.jpg"},
+    {descriptions:"Lorem, 48 years", url: "7.jpg"},
+    {descriptions:"LorF, 49 years", url: "8.jpg"},
+    {descriptions:"Lorem, 49 years", url: "9.jpg"},
+    {descriptions:"LoWm, 4 years", url: "10.png"},
+    {descriptions:"Lorem, 3 years", url: "11.jpg"},
+    {descriptions:"LoEm, 2 years", url: "12.jpg"}]
   let ind = 0;
 
   function nextPicture() {
     ind++;
-    if (ind >= pictures.length) {
+    if (ind >= data.length) {
       ind = 0;
     }
 
-    document.getElementById('pig-img').setAttribute('src', `./public/${pictures[ind]}`);
-    document.getElementById('description').textContent = descriptions[ind];
+    document.getElementById('pig-img').setAttribute('src', `./public/${data[ind].url}`);
+    document.getElementById('description').textContent = data[ind].descriptions;
   }
 
   document.addEventListener('touchstart', handleTouchStart, false);
