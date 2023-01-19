@@ -13,22 +13,24 @@
 
 
       <div class="img-container" id="img-container">
-        <img src="public/1.jpg" alt="pig" id="pig-img">
-        <div class="description" id="description">Lorem, 4 years</div>
-
+        <figure class="img-wrapper">
+          <img src="public/1.jpg" alt="pig" id="pig-img">
+          <figcaption class="description" id="description">Lorem, 4 years</figcaption>
+          <div class="controls">
+            <button class="btn-container" onclick="nextPicture()">
+              <img src="public/dislike.svg" alt="dislike" class="dislike">
+            </button>
+            <button class="btn-container" onclick="nextPicture()">
+              <img src="public/star.svg" alt="star" class="star">
+            </button>
+            <button class="btn-container" onclick="nextPicture()">
+              <img src="public/like.svg" alt="like" class="like">
+            </button>
+          </div>
+        </figure>
       </div>
 
-      <div class="controls">
-        <button class="btn-container" onclick="nextPicture()">
-          <img src="public/dislike.svg" alt="dislike" class="dislike">
-        </button>
-        <button class="btn-container" onclick="nextPicture()">
-          <img src="public/star.svg" alt="star" class="star">
-        </button>
-        <button class="btn-container" onclick="nextPicture()">
-          <img src="public/like.svg" alt="like" class="like">
-        </button>
-      </div>
+
 
     </div>
   </body>
