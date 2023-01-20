@@ -9,7 +9,6 @@
   </head>
   <body>
 
-  <script src="app.js"></script>
 
   <div class="app-header">
     <h1 class="pig-header">Pig Tinder</h1>
@@ -18,59 +17,62 @@
   <ul class="info-wrapper">
     <li class="item-wrapper">
       <div class="pig" id="pig1" style="display: block">
-        <img src="img/pig1.jpg" alt="" class="pig-img">
+        <img src="img/pig1.jpg" alt="Pig Masha" class="pig-img">
         <p class="pig-name">Маша</p>
       </div>
     </li>
     <li class="item-wrapper">
       <div class="pig" id="pig2">
-        <img src="img/pig2.jpg" alt="" class="pig-img">
+        <img src="img/pig2.jpg" alt="Pig Ann" class="pig-img">
         <p class="pig-name">Аня</p>
       </div>
     </li>
     <li class="item-wrapper">
       <div class="pig" id="pig3">
-        <img src="img/pig3.jpg" alt="" class="pig-img">
+        <img src="img/pig3.jpg" alt="Pig Dana" class="pig-img">
         <p class="pig-name">Дана</p>
       </div>
     </li>
     <li class="item-wrapper">
       <div class="pig" id="pig4">
-        <img src="img/pig4.jpg" alt="" class="pig-img">
+        <img src="img/pig4.jpg" alt="Pig Dasha" class="pig-img">
         <p class="pig-name">Даша</p>
       </div>
     </li>
     <li class="item-wrapper">
       <div class="pig" id="pig5">
-        <img src="img/pig5.jpg" alt="" class="pig-img">
+        <img src="img/pig5.jpg" alt="Pig Beatriz" class="pig-img">
         <p class="pig-name">Беатрис</p>
       </div>
     </li>
     <li class="item-wrapper">
       <div class="pig" id="pig6">
-        <img src="img/pig6.jpg" alt="" class="pig-img">
+        <img src="img/pig6.jpg" alt="Pig Zarina" class="pig-img">
         <p class="pig-name">Зарина</p>
       </div>
     </li>
     <li class="item-wrapper">
       <div class="pig" id="pig7">
-        <img src="img/pig7.jpg" alt="" class="pig-img">
+        <img src="img/pig7.jpg" alt="Pig Kate" class="pig-img">
         <p class="pig-name">Катя</p>
       </div>
     </li>
     <li class="item-wrapper">
       <div class="pig" id="pig8">
-        <img src="img/pig8.jpg" alt="" class="pig-img">
+        <img src="img/pig8.jpg" alt="Pig Ola" class="pig-img">
         <p class="pig-name">Оля</p>
       </div>
     </li>
   </ul>
 
   <div class="control-panel">
-    <div class="close" id="icon1" onclick="nextCard()"><img src="img/close.png" alt="closeIcon"></div>
-    <div class="close" id="icon2" onclick="nextCard()"><img src="img/star.png" alt="startIcon"></div>
-    <div class="close" id="icon3" onclick="nextCard()"><img src="img/like.png" alt="likeIcon"></div>
+    <div class="close" id="icon1" onclick="dislike()"><img src="img/close.png" alt="closeIcon" class="ctrl-button"></div>
+    <div class="close" id="icon2" onclick="like()"><img src="img/star.png" alt="startIcon" class="ctrl-button"></div>
+    <div class="close" id="icon3" onclick="like()"><img src="img/like.png" alt="likeIcon" class="ctrl-button"></div>
   </div>
+
+
+  <script src="app.js"></script>
 
   </body>
 </html>

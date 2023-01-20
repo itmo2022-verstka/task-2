@@ -33,11 +33,6 @@ h1 {
 }
 
 .pig-img {
-  object-position: center;
-  position: relative;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
   width:200px;
   height:200px;
   object-fit:cover;
@@ -52,7 +47,7 @@ h1 {
   flex-direction: column;
   margin-bottom: 5px;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .info-wrapper li {
@@ -72,7 +67,7 @@ h1 {
   margin: 10px auto 0 auto;
 }
 
-.control-panel img {
+.ctrl-button {
   width: 50px;
   height: 50px;
 }
