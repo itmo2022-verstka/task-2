@@ -14,7 +14,6 @@ function nextCard() {
   let pig = "pig1"
   for (let i = 1; i <= 9; i++) {
     if (document.getElementById(pig).style.display === "block") {
-      //newspaper.animate(newspaperSpinning, newspaperTiming);
       change(pig)
       break;
     } else {
@@ -24,12 +23,12 @@ function nextCard() {
 }
 
 function like() {
-  curPig.animate(swipeRight, newspaperTiming);
+  curPig.animate(swipeRight, timing);
   setTimeout(nextCard, 500);
 }
 
 function dislike() {
-  curPig.animate(swipeLeft, newspaperTiming);
+  curPig.animate(swipeLeft, timing);
   setTimeout(nextCard, 500);
 }
 
@@ -44,18 +43,13 @@ const swipeLeft = [
   { transform: 'translate(-300px, 0%) rotate(-30deg)' }
 ];
 
-const newspaperTiming = {
+const timing = {
   duration: 600,
   iterations: 1,
 }
 
 let touchstartX = 0
 let touchendX = 0
-
-function checkDirection() {
-  if (touchendX < touchstartX) alert('swiped left!')
-  if (touchendX > touchstartX) alert('swiped right!')
-}
 
 document.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX
