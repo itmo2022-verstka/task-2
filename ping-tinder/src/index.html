@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>01-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
+    <meta charset="utf-8" />
+    <title>PigTinder</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <!-- TODO -->
+    <header>
+      PigTinder
+    </header>
+    <main>
+      <section class="cards">
+        <section class="card">
+          <div class="bg">
+            <img
+              src="https://cdn.britannica.com/93/150093-050-A20009B5/guinea-pigs-coloration.jpg"
+              alt="Pig 1"
+            />
+          </div>
+          <div class="fg description">
+            <h2>Pig 1,</h2>
+            <div>Description 1</div>
+          </div>
+        </section>
+      </section>
+      <section class="actions">
+        <!-- I guess the easiet way is to make such buttons
+          is to use svg, but the task probably implies I use css art, sooo... -->
+        <button class="action">
+          <div class="icon icon--dislike"></div>
+        </button>
+        <button class="action">
+          <div class="icon icon--like"></div>
+        </button>
+        <button class="action action--superlike">
+          <div class="icon--superlike--shadow"></div>
+          <div class="icon icon--superlike"></div>
+        </button>
+      </section>
+    </main>
   </body>
 </html>
