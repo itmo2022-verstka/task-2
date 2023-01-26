@@ -5,16 +5,16 @@
     left: 0;
     padding: 20px 0;
     font-family: "PT SansNarrow", sans-serif;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #000000B3;
     color: white;
     text-align: center;
-    font-size: 4rem;
+    font-size: 2rem;
     z-index: 1000;
 }
 
 
 .tinder {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .tinder .pig-checkbox {
@@ -45,14 +45,14 @@
     background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 0, 0));
 }
 
-.cards .card .picture img {
+.cards .card .picture .pig-image {
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
 .cards .card,
 .cards .card .picture,
-.cards .card .picture img {
+.cards .card .picture .pig-image {
     height: 100%;
 }
 
@@ -84,10 +84,11 @@
 
 @media (orientation: portrait) {
     .tinder {
-        height: calc(100vh - 60px);
+        margin-top: 8rem;
+        height: calc(100vh);
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .cards {
@@ -105,6 +106,7 @@
     .buttons {
         justify-content: space-around;
         align-items: center;
+        margin-bottom: 250px;
     }
 }
 
@@ -135,7 +137,7 @@
     }
 
     .header {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .cards .card .info {
