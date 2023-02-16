@@ -1,1 +1,161 @@
-/* TODO */
+:root {
+  --pig-image-height: min(65vh, 150vw);
+  --pig-image-width: min(92vw, 65vh);
+  --title-font-size: min(4vh, 8vw);
+}
+
+@font-face {
+  font-family: 'PT SansNarrow';
+  src: url('fonts/PT_Sans-Narrow-Web-Regular.ttf');
+}
+
+/* ------------------ */
+
+.pig-tinder-body {
+  display: flex;
+  overflow: hidden;
+
+  flex-direction: column;
+
+  align-content: space-between;
+  align-items: flex-start;
+
+  margin: 0;
+
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: var(--title-font-size);
+}
+
+/* ------------------ */
+
+.pig-tinder-header {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  height: 8vh;
+
+  margin-bottom: 3vh;
+
+  background-color: #333333;
+}
+
+.pig-tinder-title {
+  width: inherit;
+
+  color: white;
+
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+}
+
+/* ------------------ */
+
+.pigs {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+}
+
+.pig {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+}
+
+.pig ul {
+  z-index: 2;
+
+  margin: 0;
+  padding: 0;
+
+  box-shadow: 0 0.6vh 0.7vh rgba(0, 0, 0, 0.4);
+
+  font-size: 0;
+  list-style: none;
+}
+
+.pig-image {
+  z-index: 1;
+
+  display: none;
+
+  width: var(--pig-image-width);
+  height: var(--pig-image-height);
+
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.pig-name {
+  position: absolute;
+
+  bottom: 3vh;
+  left: calc(50% - var(--pig-image-width) / 2 + 5vh);
+
+  z-index: 2;
+
+  margin: 0;
+
+  color: white;
+  font-size: calc(var(--title-font-size) * 1.5);
+
+  text-align: center;
+
+  text-shadow: 0.2vh 0.2vh 0.3vh rgba(0, 0, 0, 0.5);
+}
+
+.arrow {
+  position: absolute;
+
+  z-index: 3;
+
+  height: min(10vh, 15vw);
+  margin: 0;
+
+  filter: drop-shadow(0.2vh 0.2vh 0.3vh rgba(0, 0, 0, 0.5));
+
+  opacity: 60%;
+}
+
+.arrow.left {
+  left: calc(50% - var(--pig-image-width) / 2 + 1vh);
+}
+
+.arrow.right {
+  right: calc(50% - var(--pig-image-width) / 2 + 1vh);
+
+  transform: scale(-1, 1);
+}
+
+/* ------------------ */
+
+.pig-tinder-buttons {
+  display: flex;
+  align-items: center;
+
+  align-self: center;
+  justify-content: space-between;
+
+  height: 24vh;
+
+  gap: min(15vw, 15vh);
+}
+
+.pig-button {
+  width: min(10vh, 15vw);
+  height: min(10vh, 15vw);
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 1.5vh 0.8vh rgba(0, 0, 0, 0.14);
+}

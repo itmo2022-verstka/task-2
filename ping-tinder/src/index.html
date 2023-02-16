@@ -2,10 +2,34 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>01-about-cats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>02-pig-tinder</title>
     <link rel="stylesheet" href="./index.css">
   </head>
-  <body>
-    <!-- TODO -->
+  <body class="pig-tinder-body">
+    <header class="pig-tinder-header">
+      <h1 class="pig-tinder-title">Pig Tinder</h1>
+    </header>
+    <main class="pigs">
+      <div class="pig">
+        <ul>
+          <li>
+            <img src="img/pig1-senechka-1.jpg" alt="Сенечка" class="pig-image"
+                   style="display: block">
+          </li>
+          <li><img src="img/pig1-senechka-2.jpg" alt="Сенечка" class="pig-image"></li>
+          <li><img src="img/pig1-senechka-3.jpg" alt="Сенечка" class="pig-image"></li>
+        </ul>
+        <h2 class="pig-name">Сенечка</h2>
+        <img src="img/arrow.png" alt="left-arrow" class="arrow left" onclick="previousPhoto()">
+        <img src="img/arrow.png" alt="right-arrow" class="arrow right" onclick="nextPhoto()">
+      </div>
+    </main>
+    <footer class="pig-tinder-buttons">
+      <img src="img/reject.png" alt="reject" class="pig-button" onclick="reject()">
+      <img src="img/super-like.png" alt="super-like" class="pig-button" onclick="superLike()">
+      <img src="img/like.png" alt="like" class="pig-button" onclick="like()">
+    </footer>
   </body>
+  <script src="index.js"></script>
 </html>
