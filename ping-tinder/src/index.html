@@ -2,10 +2,104 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>01-about-cats</title>
+    <title>02-pig-tinder</title>
     <link rel="stylesheet" href="./index.css">
+    <script type="text/javascript" src="./index.js"></script>
   </head>
   <body>
-    <!-- TODO -->
+
+    <header class="header">
+      <h1 class="title">Pig🙂Tinder</h1>
+    </header>
+
+    <main class="cards">
+      <div class="card pig0">
+        <img id="image" class="image" src="img/0.jpg" alt="Valeriya">
+        <div class="card-info">
+          <p class="name">Валерия</p>
+          <p class="description">4 месяца</p>
+        </div>
+      </div>
+
+      <div class="card pig1">
+        <img id="image" class="image" src="img/1.jpg" alt="Kamila">
+        <div class="card-info">
+          <p class="name">Камила</p>
+          <p class="description">12 месяцев</p>
+        </div>
+      </div>
+
+      <div class="card pig2">
+        <img id="image" class="image" src="img/2.jpg" alt="Diana">
+        <div class="card-info">
+          <p class="name">Диана</p>
+          <p class="description">2 месяца</p>
+        </div>
+      </div>
+
+      <div class="card pig3">
+        <img id="image" class="image" src="img/3.jpg" alt="Alyona">
+        <div class="card-info">
+          <p class="name">Алёна</p>
+          <p class="description">6 месяцев</p>
+        </div>
+      </div>
+
+      <div class="card pig4">
+        <img id="image" class="image" src="img/4.jpg" alt="Evdokia">
+        <div class="card-info">
+          <p class="name">Евдокия</p>
+          <p class="description">7 месяцев</p>
+        </div>
+      </div>
+
+      <div class="card pig5">
+        <img id="image" class="image" src="img/5.jpg" alt="Olivia">
+        <div class="card-info">
+          <p class="name">Оливия</p>
+          <p class="description">9 месяцев</p>
+        </div>
+      </div>
+
+      <div class="card pig6">
+        <img id="image" class="image" src="img/6.jpg" alt="Ulyana">
+        <div class="card-info">
+          <p class="name">Ульяна</p>
+          <p class="description">10 месяцев</p>
+        </div>
+      </div>
+
+      <div class="card pig7">
+        <img id="image" class="image" src="img/7.jpg" alt="Alisiya">
+        <div class="card-info">
+          <p class="name">Алисия</p>
+          <p class="description">9 месяцев</p>
+        </div>
+      </div>
+
+      <div class="card last">
+        <img id="image" class="image" src="img/last.jpg" alt="Uvi">
+        <div class="card-info">
+          <p class="name">Увы</p>
+          <p class="description">Свинки кончились.</p>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="buttons">
+      <button class="button prev" onclick="changeCard('prev')">
+        ⬅️
+      </button>
+      <button class="button dislike" onclick="changeCard('dislike')">
+        ❌
+      </button>
+      <button class="button like" onclick="changeCard('like')">
+        ❤️
+      </button>
+      <button class="button superlike" onclick="changeCard('superlike')">
+        ⭐
+      </button>
+    </footer>
   </body>
 </html>
