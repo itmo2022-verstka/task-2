@@ -37,9 +37,7 @@
   background-size: 100% auto;
   box-shadow: inset 100px 100px 100px 100px rgba(0, 0, 0, 0.05);
   border-radius: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin: 20px auto auto auto;
   transition: background 0.5s ease;
 }
 
